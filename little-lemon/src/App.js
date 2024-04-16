@@ -41,7 +41,7 @@ function ListOfGoals(props) {
 export default function App() {
   const [allGoals, updateAllGoals] = React.useState([]);
 
-  function addGoal(goal) { updateAllGoals([...allGoals, goal]); }
+  function addGoal(goal) { updateAllGoals((prevGoals)=> [...prevGoals, goal]); }
   return (
     <div className="App">
       <GoalForm onAdd={addGoal} />
